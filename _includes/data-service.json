@@ -1,0 +1,10 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Service",
+  "name": "{{ include.name }}",
+  "aggregateRating":
+    {"@type": "AggregateRating",
+     "ratingValue": "{{ include.rating }}",
+     "reviewCount": "{{ include.reviews }}"
+    }
+}

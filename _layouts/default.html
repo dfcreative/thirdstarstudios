@@ -1,0 +1,74 @@
+<!doctype html>
+
+{% assign lang=page.lang | default: 'en' %}
+
+<html lang="{{ lang }}" class="no-js">
+
+	{% include head.html %}
+
+	<body class="page{% if page.tilda == true %} page--tilda{% elsif page.blank == true %} page--blank{% else %} page--default{% endif %}">
+		{% if page.blank != true %}
+			{% include header.html %}
+		{% endif %}
+
+		<!-- Init prev/next post arrows -->
+		{% if page.previous %}
+			{% if page.previous.title %}
+				{% if page.previous.lang == lang %}
+				{% assign prev=page.previous %}
+				{% else %}
+				{% assign prev=page.previous.previous %}
+				{% endif %}
+			{% else %}
+				{% assign prev=site.pages | where:"permalink", page.previous | first %}
+				{% unless prev %}
+				{% assign prev=site.pages | where:"ref", page.previous | first %}
+				{% endunless %}
+			{% endif %}
+
+			{% if prev %}
+			<a class="post-arrow post-arrow--prev" href="{{ prev.url }}">
+				{% include up.svg %} <span class="post-arrow-text">{{ prev.title | default: prev.meta-title }}</span>
+			</a>
+			{% endif %}
+		{% endif %}
+
+		{% if page.next %}
+			{% if page.next.title %}
+				{% if page.next.lang == lang %}
+				{% assign next=page.next %}
+				{% else %}
+				{% assign next=page.next.next %}
+				{% endif %}
+			{% else %}
+				{% assign next=site.pages | where:"permalink", page.next | first %}
+				{% unless next %}
+				{% assign next=site.pages | where:"ref", page.next | first %}
+				{% endunless %}
+			{% endif %}
+
+			{% if next %}
+			<a class="post-arrow post-arrow--next" href="{{ next.url }}">
+				<span class="post-arrow-text">{{ next.title | default: next.meta-title }}</span> {% include up.svg %}
+			</a>
+			{% endif %}
+		{% endif %}
+
+		<main class="site-content">
+			{% if page.tilda == false and page.blank != true %}
+			<div class="site-content-container">
+				<h1>{{ page.title }}</h1>
+				{{ content }}
+			</div>
+			{% else %}
+			{{ content }}
+			{% endif %}
+		</main>
+
+		{% if page.blank != true %}
+			{% include footer.html %}
+		{% endif %}
+
+		{% include foot.html %}
+	</body>
+</html>

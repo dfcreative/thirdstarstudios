@@ -1,0 +1,132 @@
+title: ThirdStarStudios
+description: Audio that feels right.
+author: Steve Levine
+email: steve@thirdstarstudios.com
+url: "https://thirdstarstudios.github.io"
+address: "6965 rue Drolet. apt. 101, Montreal, QC, H2S2T5"
+phone: "+14388266514"
+
+baseurl: ""
+assets: "/assets"
+permalink: :title
+
+kramdown:
+  parse_span_html: true
+
+defaults:
+    - scope:
+        path: ""
+      values:
+        layout: "default"
+
+exclude: ['CNAME', '_config.yml', '*.json', '.gitignore', 'readme.md', '*.xml', 'admin.html', 'node_modules']
+keep_files: ['sftp-config.json', '.htaccess']
+include: ['.htaccess']
+
+gems:
+  - jekyll-redirect-from
+  - jekyll-feed
+
+prose:
+  rooturl: ''
+  siteurl: 'http://web-being.github.io/thirdstarstudios'
+  media: 'assets'
+  ignore: ['CNAME', '_config.yml', '_config-dev.yml', '*.json', '.gitignore', 'readme.md', '*.xml', 'admin.html', 'node_modules']
+  metadata:
+    pages:
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Published"
+          value: true
+      - name: "permalink"
+        field:
+          element: "text"
+          label: "Permalink"
+          help: "Main URL for the page, see <a href='https://jekyllrb.com/docs/permalinks/'>permalinks</a>. It should start and end with /. Only latin chars are allowed."
+          type: "text"
+          placeholder: "/main-title/"
+      - name: "redirect_from"
+        field:
+          element: "text"
+          label: "Redirect URL"
+          help: "This URL will redirect to the permalink"
+          type: "text"
+          placeholder: "/alternative-title/"
+      - name: "ref"
+        field:
+          element: "text"
+          label: "Reference"
+          help: "Short word to identify the translation of the page in other language"
+          type: "text"
+          placeholder: "home"
+      - name: "lang"
+        field:
+          element: "select"
+          label: "Language"
+          help: "Choose page language"
+          options:
+            - name: 'English'
+              value: 'en'
+            - name: 'Français'
+              value: 'fr'
+      - name: "image"
+        field:
+          element: "text"
+          label: "Featured image URL"
+          help: "Insert URL to the image used as featured for the post: facebook, pinterest etc"
+          type: "text"
+          placeholder: "/assets/image.jpg"
+      - name: "meta-title"
+        field:
+          element: "text"
+          label: "Meta Title"
+          help: "Title tag. Keywords first, < 70 chars, no articles/preps/etc."
+          type: "text"
+          placeholder: "[Primary Keyword] - [Secondary Keyword] | TTBA Group | Montreal"
+      - name: "meta-description"
+        field:
+          element: "textarea"
+          label: "Meta Description"
+          help: "Used as description snippet by search engines. < 160 chars"
+          placeholder: ""
+
+t:
+  title:
+    en: ThirdStarStudios
+    fr: Studios 3✴
+  description:
+    en: Audio that feels right.
+    fr: Son qui sent bon.
+  languages:
+    - name: 'English'
+      key: 'en'
+    - name: 'Français'
+      key: 'fr'
+  menu:
+    en:
+      intro: "Agency"
+      musicians: "For musicians"
+      film: "For films & games"
+      commercial: "Corporate"
+      equipment: "Equipment"
+      blog: "Blog"
+      about: "About"
+      projects: "Projects"
+      testimonials: "Testimonials"
+      contact: "Contact us"
+      team: "The Team"
+    fr:
+      intro: "L’Agence"
+      musicians: "For musicians"
+      film: "Projets"
+      commercial: "Projets"
+      equipment: "Our Work"
+      blog: "Blogue"
+      about: "À propos"
+      projects: "Projects"
+      testimonials: "Testimonials"
+      contact: "Contact"
+      team: "Équipe"
+  copyright:
+    en: "© 2017 ThirdStarStudios. All rights reserved.<br>steve@thirdstarstudios.com"

@@ -1,0 +1,19 @@
+{% assign posts=include.posts | default: site.posts %}
+
+{% for post in posts reversed %}{% if forloop.index <= 3%}<article class="article" {% if post.hidden %}hidden{% endif %}>
+    <a class="article-link" href="{{ post.url | prepend: site.url }}">
+        <figure class="article-figure">
+            <div class="article-image" style="background-image: url('{% include featured-image page=post %}');" title="{{ post.title }}"/>
+        </figure>
+        <div class="article-title"><span class="article-title-text">{{ post.title }}</span></div>
+        <div class="article-meta">
+            {% if post.author %}<span class="article-author">{{ post.author }}</span>{% endif %}
+            <time class="article-date" datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date_to_string }}
+            </time>
+        </div>
+        <div class="article-excerpt">
+            {{ post.excerpt | strip_html | truncatewords: 22 }}
+        </div>
+    </a>
+</article>{% endif %}{% endfor %}
