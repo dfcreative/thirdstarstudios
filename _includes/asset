@@ -1,1 +1,0 @@
-{{ site.assets }}/{{ include.name | uri_escape }}?v={{ site.time | date: '%s' }}
