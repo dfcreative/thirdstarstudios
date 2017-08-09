@@ -1,0 +1,28 @@
+{% assign sep=include.separator | default: '' %}
+{% assign dropdown=include.dropdown | defult: false %}
+{% assign toggle=include.toggle | defult: false %}
+
+<nav class="{{ include.class }} menu">
+	{% include menu-item.html ref='home' %}
+	{{sep}}
+	{% include menu-item.html ref='services' refs='design,smm,seo,advertising,branding,video,all-services' %}
+	{{sep}}
+	{% include menu-item.html ref='blog' %}
+	{{sep}}
+	{% include menu-item.html ref='projects' %}
+	{{sep}}
+	{% include menu-item.html refs='team,careers,internship' ref='about' %}
+	{{sep}}
+	{% include menu-item.html ref='contact' %}
+	{% if include.nolang != true %}{{ sep }}
+	{% if lang != 'en' %}
+	<a class="menu-item" href="{% include t-link ref=page.ref lang='en' %}">
+		<span class="menu-link menu-link--lang">{% include flag-en.html %} En</span>
+	</a>
+	{% elsif lang != 'fr' %}
+	<a class="menu-item" href="{% include t-link ref=page.ref lang='fr' %}">
+		<span class="menu-link menu-link--lang">{% include flag-fr.html %} Fr</span>
+	</a>
+	{% endif %}
+	{% endif %}
+</nav>

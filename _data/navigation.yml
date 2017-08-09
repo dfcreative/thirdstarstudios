@@ -1,0 +1,8 @@
+- link: /
+  name: Home
+- link: /about/
+  name: About
+- link: /services-musicians
+  name: Musician Services
+- link: /contact/
+  name: Contact
