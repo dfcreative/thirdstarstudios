@@ -7,12 +7,23 @@ lang: en
 <!doctype html>
 <link rel="stylesheet" type="text/css" href="./assets/normalize.css">
 <link rel="stylesheet" type="text/css" href="./assets/index.css">
+
+
+{% for page in site.pages %}
+	{% if page.ref == 'services-music' %}{{ page.content }}{% endif %}
+	{% if page.ref == 'services-multimedia' %}{{ page.content }}{% endif %}
+	{% if page.ref == 'services-commercial' %}{{ page.content }}{% endif %}
+	{% if page.ref == 'equipment' %}{{ page.content }}{% endif %}
+	{% if page.ref == 'about' %}{{ page.content }}{% endif %}
+	{% if page.ref == 'contact' %}{{ page.content }}{% endif %}
+{% endfor %}
+
+<!--
 <section id="intro">
 - Photogallery
 - Menu
 -
 </section>
-
 <section id="musicians">
 	Editing
 	Mixing
@@ -87,3 +98,4 @@ lang: en
 <section id="testimonials">
 
 </section>
+-->
