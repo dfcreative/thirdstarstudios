@@ -10,12 +10,12 @@ lang: en
 
 
 {% for page in site.pages %}
-	{% if page.ref == 'services-music' %}{{ page.content }}{% endif %}
-	{% if page.ref == 'services-multimedia' %}{{ page.content }}{% endif %}
-	{% if page.ref == 'services-commercial' %}{{ page.content }}{% endif %}
-	{% if page.ref == 'equipment' %}{{ page.content }}{% endif %}
-	{% if page.ref == 'about' %}{{ page.content }}{% endif %}
-	{% if page.ref == 'contact' %}{{ page.content }}{% endif %}
+	{% if page.ref == 'services-music' %}{{ page.content | markdownify  }}{% endif %}
+	{% if page.ref == 'services-multimedia' %}{{ page.content | markdownify }}{% endif %}
+	{% if page.ref == 'services-commercial' %}{{ page.content | markdownify }}{% endif %}
+	{% if page.ref == 'equipment' %}{{ page.content | markdownify }}{% endif %}
+	{% if page.ref == 'about' %}{{ page.content | markdownify }}{% endif %}
+	{% if page.ref == 'contact' %}{{ page.content | markdownify }}{% endif %}
 {% endfor %}
 
 <!--
