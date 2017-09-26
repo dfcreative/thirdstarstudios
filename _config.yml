@@ -13,7 +13,7 @@ permalink: :title
 kramdown:
   parse_span_html: true
   parse_block_html: true
-
+theme: minima
 defaults:
     - scope:
         path: ""

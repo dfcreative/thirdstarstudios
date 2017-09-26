@@ -29,3 +29,8 @@ a.active {
 .menu li a:hover {
     background-color: #111;
 }
+
+.equipment-table  {border-collapse:collapse;border-spacing:0;}
+.equipment-table td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.equipment-table th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.equipment-table .equipment-td{vertical-align:top}
