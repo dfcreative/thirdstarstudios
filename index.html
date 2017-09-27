@@ -4,98 +4,33 @@ title: Home
 lang: en
 ---
 
-<!doctype html>
-<link rel="stylesheet" type="text/css" href="./assets/normalize.css">
-<link rel="stylesheet" type="text/css" href="./assets/index.css">
-
-
 {% for page in site.pages %}
-	{% if page.ref == 'services-music' %}{{ page.content | markdownify  }}{% endif %}
-	{% if page.ref == 'services-multimedia' %}{{ page.content | markdownify }}{% endif %}
-	{% if page.ref == 'services-commercial' %}{{ page.content | markdownify }}{% endif %}
-	{% if page.ref == 'equipment' %}{{ page.content | markdownify }}{% endif %}
-	{% if page.ref == 'about' %}{{ page.content | markdownify }}{% endif %}
-	{% if page.ref == 'contact' %}{{ page.content | markdownify }}{% endif %}
+	{% if page.ref == 'intro' %}{{ page.content | markdownify }}{% endif %}
 {% endfor %}
-
-<!--
-<section id="intro">
-- Photogallery
-- Menu
--
-</section>
-<section id="musicians">
-	Editing
-	Mixing
-	Mastering
-	Original music composition
-</section>
-
-<section id="film-tv-games">
-	Voice-over and ADR recording
-	Voice-over talent
-	Audio engineering and mixing
-	Original music composition
-</section>
-
-<section id="corporate-commercials">
-	Live events
-	Voice-over
-	Audio engineering and mixing
-	Original music/ jingle composition
-</section>
-
-<section id="equipment">
-	Preamps:
-
-	Neve 1073 DPA
-	Focusrite ISA828
-	Universal Audio Apollo (with Unison)
-
-	Compressors
-
-	Universal Audio 1176
-
-	Converters:
-
-	Burl M80 Mothership
-	Universal Audio Apollo
-
-	DAWs:
-
-	Pro Tools HD 12.7
-	Presonus Studio One 3.5
-
-	Plugins:
-
-	Universal Audio
-	SoundToys
-	Waves
-	Celemony
-	iZotope
-	Klanghelm
-	Sknote
-</section>
-
-<section id="contacts">
-	Steve@ThirdStarStudios.com
-
-	(438) 826-6514
-	Appt 101, 6965 Rue Drolet
-	Montreal, Quebec
-
-	H2S2T5
-</section>
-
-<section id="faq">
-
-</section>
-
-<section id="blog">
-
-</section>
-
-<section id="testimonials">
-
-</section>
--->
+{% for page in site.pages %}
+	{% if page.ref == 'services-music' %}{{ page.content }}{% endif %}
+{% endfor %}
+{% for page in site.pages %}
+	{% if page.ref == 'services-multimedia' %}{{ page.content }}{% endif %}
+{% endfor %}
+{% for page in site.pages %}
+	{% if page.ref == 'services-commercial' %}{{ page.content }}{% endif %}
+{% endfor %}
+{% for page in site.pages %}
+	{% if page.ref == 'about' %}{{ page.content }}{% endif %}
+{% endfor %}
+{% for page in site.pages %}
+	{% if page.ref == 'equipment' %}{{ page.content }}{% endif %}
+{% endfor %}
+{% for page in site.pages %}
+	{% if page.ref == 'contact' %}{{ page.content }}{% endif %}
+{% endfor %}
+{% for page in site.pages %}
+	{% if page.ref == 'faq' %}{{ page.content }}{% endif %}
+{% endfor %}
+{% for page in site.pages %}
+	{% if page.ref == 'blog' %}{{ page.content }}{% endif %}
+{% endfor %}
+{% for page in site.pages %}
+	{% if page.ref == 'testimonials' %}{{ page.content }}{% endif %}
+{% endfor %}
