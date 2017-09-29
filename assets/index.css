@@ -6,6 +6,10 @@ a.active {
   color: #FFE000;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
 
 .menu ul {
     list-style-type: none;
@@ -32,9 +36,6 @@ a.active {
 }
 
 .site-content {
-    max-width: 800px;
-    margin: 0 auto 4rem;
-    position: relative;
 }
 
 .equipment-table  {border-collapse:collapse;border-spacing:0;}
@@ -47,3 +48,49 @@ a.active {
 .equipment-table td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
 .equipment-table th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
 .equipment-table .equipment-td{vertical-align:top}
+
+
+.section-content {
+    position: relative;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    position: relative;
+}
+
+.section--intro {
+    text-align: center;
+    height: 100vh;
+    color: white;
+    background: linear-gradient(to bottom, #36455D, #273551);
+}
+
+.section--intro .section-content {
+}
+
+
+.section--intro .section-title {
+    margin-top: 30vh;
+    font-weight: 900;
+    font-size: 4rem;
+    color: #81FAFB;
+}
+.section--intro .section-tagline {
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: 100;
+}
+
+.section--intro .section-menu {
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 30vh;
+    color: white;
+    font-weight: 100;
+}
+.section--intro .section-menu-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+}

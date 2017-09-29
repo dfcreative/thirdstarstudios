@@ -5,7 +5,7 @@ lang: en
 ---
 
 {% for page in site.pages %}
-	{% if page.ref == 'intro' %}{{ page.content | markdownify }}{% endif %}
+	{% if page.ref == 'intro' %}{{ page.content }}{% endif %}
 {% endfor %}
 {% for page in site.pages %}
 	{% if page.ref == 'services-music' %}{{ page.content }}{% endif %}
