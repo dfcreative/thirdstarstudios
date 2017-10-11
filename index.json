@@ -1,0 +1,123 @@
+{
+  "@context": "http://schema.org/",
+  "@type": "Person",
+  "brand": {
+    "@type": "Brand",
+    "name": "ThirdStarStudios"
+  },
+  "addess": {
+    "@type": "PostalAddress",
+    "addressLocality": "Montreal",
+    "addressRegion": "QC",
+    "streetAddress": "",
+    "postalCode": ""
+  },
+  "email": "steve@thirdstarstudios.com",
+  "telephone": "+1 438 826-6514",
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "category": "Music Services",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "In-studio multi-track recording"
+      }
+    },
+    {
+      "@type": "Offer",
+      "category": "Music Services",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Live show multi-track recording"
+      }
+    },
+    {
+      "@type": "Offer",
+      "category": "Music Services",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Editing"
+      }
+    },
+    {
+      "@type": "Offer",
+      "category": "Music Services",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Mastering"
+      }
+    },
+    {
+      "@type": "Offer",
+      "category": "Music Services",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Original music composition"
+      }
+    },
+    {
+      "@type": "Offer",
+      "category": "Multimedia Services",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Voice-over and ADR recording"
+      }
+    },
+    {
+      "@type": "Offer",
+      "category": "Multimedia Services",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Voice-over talent"
+      }
+    },
+    {
+      "@type": "Offer",
+      "category": "Multimedia Services",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Audio engineering and mixing"
+      }
+    },
+    {
+      "@type": "Offer",
+      "category": "Multimedia Services",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Original music composition"
+      }
+    },
+    {
+      "@type": "Offer",
+      "category": "Commercial/corporate services",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Live event setup and sound"
+      }
+    },
+    {
+      "@type": "Offer",
+      "category": "Commercial/corporate services",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Voice-over recording"
+      }
+    },
+    {
+      "@type": "Offer",
+      "category": "Commercial/corporate services",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Multimedia audio engineering and mixing"
+      }
+    },
+    {
+      "@type": "Offer",
+      "category": "Commercial/corporate services",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Original music / jingle composition"
+      }
+    }
+  ]
+}

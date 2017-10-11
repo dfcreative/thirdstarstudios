@@ -1,6 +1,8 @@
 body{
     position: relative;
-	font-family: sans-serif;
+	font-family: 'Open Sans', sans-serif;
+    font-size: 1;
+    line-height: 1.5;
 }
 a.active {
   color: #FFE000;
@@ -38,33 +40,149 @@ h1, h2, h3, h4, h5, h6 {
 .site-content {
 }
 
-.equipment-table  {border-collapse:collapse;border-spacing:0;}
-.equipment-table td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.equipment-table th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.equipment-table .equipment-td{vertical-align:top}
+.section {
+    border-bottom: 1px solid rgba(240,240,240,1);
+}
 
-
-.equipment-table  {border-collapse:collapse;border-spacing:0;}
-.equipment-table td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.equipment-table th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.equipment-table .equipment-td{vertical-align:top}
-
+.section-title {
+    font-size: 2.4rem;
+    margin: 0 0 1.2rem;
+}
 
 .section-content {
     position: relative;
-    overflow: hidden;
     max-width: 800px;
-    margin: 0 auto 4rem;
+    margin: 4rem auto 4rem;
     position: relative;
 }
 
+.services-list {
+    margin: 0;
+}
+
+
+
+
+.equipment-table {
+    background: white;
+    border-radius:3px;
+    border-collapse: collapse;
+    height: 320px;
+    margin: auto;
+    padding:5px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    animation: float 5s infinite;
+}
+
+th {
+    color:#D5DDE5;
+    background:#1b1e24;
+    border-bottom:4px solid #9ea7af;
+    border-right: 1px solid #343a45;
+    font-size:23px;
+    font-weight: 600;
+    padding:24px;
+    text-align:left;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    vertical-align:middle;
+}
+
+th:first-child {
+    border-top-left-radius:3px;
+}
+
+th:last-child {
+    border-top-right-radius:3px;
+    border-right:none;
+}
+
+tr {
+    border-top: 1px solid #C1C3D1;
+    border-bottom-: 1px solid #C1C3D1;
+    color:#666B85;
+    font-size:16px;
+    font-weight:normal;
+    text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+
+tr:hover td {
+    background:#4E5066;
+    color:#FFFFFF;
+    border-top: 1px solid #22262e;
+}
+
+tr:first-child {
+    border-top:none;
+}
+
+tr:last-child {
+    border-bottom:none;
+}
+
+tr:nth-child(odd) td {
+    background:#EBEBEB;
+}
+
+tr:nth-child(odd):hover td {
+    background:#4E5066;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius:3px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius:3px;
+}
+
+td {
+    background:#FFFFFF;
+    padding:20px;
+    text-align:left;
+    vertical-align:middle;
+    font-weight:300;
+    font-size:18px;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+    border-right: 0px;
+}
+
+th.text-left {
+    text-align: left;
+}
+
+th.text-center {
+    text-align: center;
+}
+
+th.text-right {
+    text-align: right;
+}
+
+td.text-left {
+    text-align: left;
+}
+
+td.text-center {
+    text-align: center;
+}
+
+td.text-right {
+    text-align: right;
+}
+
+
 .section--intro {
     text-align: center;
+    overflow: hidden;
     height: 100vh;
     color: white;
     background: linear-gradient(to bottom, #36455D, #273551);
 }
-
 .section--intro .section-content {
 }
 
@@ -87,10 +205,17 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif;
     margin-top: 30vh;
     color: white;
-    font-weight: 100;
+    font-weight: 600;
 }
 .section--intro .section-menu-link {
-    color: white;
+    color: rgba(255,255,255,.95);
     text-decoration: none;
     margin: 0 1rem;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+    transition: .3s linear;
 }
+.section--intro .section-menu-link:hover {
+    color: rgba(255,255,255,1);
+    border-bottom: 1px solid rgba(255,255,255,1);
+}
+
