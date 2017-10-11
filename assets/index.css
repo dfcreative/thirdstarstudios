@@ -1,7 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
     position: relative;
-	font-family: 'Open Sans', sans-serif;
-    font-size: 1;
+	font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
     line-height: 1.5;
 }
 a.active {
@@ -11,6 +15,7 @@ a.active {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
+
 
 
 .menu ul {
@@ -42,11 +47,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .section {
     border-bottom: 1px solid rgba(240,240,240,1);
+    overflow: hidden;
+    position: relative;
 }
 
 .section-title {
     font-size: 2.4rem;
     margin: 0 0 1.2rem;
+    text-align: center;
 }
 
 .section-content {
@@ -58,9 +66,50 @@ h1, h2, h3, h4, h5, h6 {
 
 .services-list {
     margin: 0;
+    list-style: none;
+    padding: 0 2rem 0 0;
+    font-size: 1.6rem;
+    font-weight: 100;
+    width: 50%;
+    float: left;
+    display: block;
+}
+
+.services-list-item {
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.services svg {
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    fill: white;
+    float: left;
+    margin-right: 1rem;
 }
 
 
+.services--music {
+    min-height: 100vh;
+    color: white;
+    background: linear-gradient(to right, black 0%, #212121 50%, black 100%);
+}
+
+.services--music:before {
+    position: absolute;
+    opacity: .5;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(./colored-wf.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 110% auto;
+    mix-blend-mode: screen;
+}
 
 
 .equipment-table {
@@ -71,7 +120,8 @@ h1, h2, h3, h4, h5, h6 {
     margin: auto;
     padding:5px;
     width: 100%;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);*/
+    box-shadow: #000 0 4vw 6vw -2.5vw;
     animation: float 5s infinite;
 }
 
@@ -181,20 +231,39 @@ td.text-right {
     overflow: hidden;
     height: 100vh;
     color: white;
-    background: linear-gradient(to bottom, #36455D, #273551);
+    border-bottom: none;
+    background: linear-gradient(to bottom, rgba(58, 71, 97, .5), rgba(39, 54, 81, 1)), url(./mic.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: screen;
+}
+.section--intro:before {
+    position: absolute;
+    background: url(./cymatics.png);
+    background-position: center 10vh;
+    background-repeat: no-repeat;
+    background-size: 30vh;
+    mix-blend-mode: screen;
+    opacity: .75;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 .section--intro .section-content {
 }
 
 
 .section--intro .section-title {
-    margin-top: 30vh;
+    margin-top: 40vh;
     font-weight: 900;
     font-size: 4rem;
     color: #81FAFB;
+    mix-blend-mode: overlay;
 }
 .section--intro .section-tagline {
-    /*font-family: 'Open Sans', sans-serif;*/
+    /*font-family: 'Roboto', sans-serif;*/
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     line-height: 1.5;
@@ -202,20 +271,20 @@ td.text-right {
 }
 
 .section--intro .section-menu {
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 30vh;
-    color: white;
-    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20vh;
+    font-weight: 100;
 }
 .section--intro .section-menu-link {
-    color: rgba(255,255,255,.95);
+    color: rgba(255, 255, 255,.95);
     text-decoration: none;
     margin: 0 1rem;
-    border-bottom: 1px solid rgba(255,255,255,.15);
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255,.15);
     transition: .3s linear;
 }
 .section--intro .section-menu-link:hover {
     color: rgba(255,255,255,1);
-    border-bottom: 1px solid rgba(255,255,255,1);
+    border-bottom: 1px solid rgba(255, 255, 255,1);
 }
 
