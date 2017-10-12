@@ -60,31 +60,39 @@ h1, h2, h3, h4, h5, h6 {
 .section-content {
     position: relative;
     max-width: 800px;
-    margin: 4rem auto 4rem;
+    margin: 6rem auto 6rem;
     position: relative;
 }
 
-.services-list {
-    margin: 0;
-    list-style: none;
-    padding: 0 2rem 0 0;
-    font-size: 1.6rem;
+.section-tagline {
+    font-size: 1.4rem;
     font-weight: 100;
+    max-width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.services-list {
+    margin: 2rem 0 0;
+    list-style: none;
+    padding: 0 0 0 7.5%;
     width: 50%;
-    float: left;
-    display: block;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .services-list-item {
     overflow: hidden;
     margin: 2rem 0;
+    font-size: 1.6rem;
+    font-weight: 400;
 }
 
 .services svg {
     width: 4rem;
     height: 4rem;
     position: relative;
-    fill: white;
+    fill: black;
     float: left;
     margin-right: 1rem;
 }
@@ -104,11 +112,39 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 0;
     left: 0;
     right: 0;
-    background: url(./colored-wf.png);
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 90%), url(./colored-wf.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 110% auto;
+    background-blend-mode: multiply;
     mix-blend-mode: screen;
+}
+
+
+.services--music svg {
+    fill: white;
+}
+
+
+.services--commercial {
+    min-height: 100vh;
+    background: linear-gradient(to right, rgba(216, 216, 216, 1) 0%, rgba(230, 230, 230, 1) 50%, rgba(216, 216, 216, 1) 100%);
+}
+
+.services--commercial:before {
+    /*position: absolute;
+    opacity: .5;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 60%, rgba(0,0,0,1) 90%), url(./colored-wf.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 110% auto;
+    background-blend-mode: multiply;
+    mix-blend-mode: screen;*/
 }
 
 
