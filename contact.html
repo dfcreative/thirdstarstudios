@@ -12,13 +12,43 @@ ref: contact
 	<header class="section-header">
 		<h2>Contact</h2>
 	</header>
-	<a href="mailto: Steve@ThirdStarStudios.com">Steve@ThirdStarStudios.com</a><br/>
+
+	<div class="map-container">
+		<div id="map" class="map"></div>
+	</div>
+
+	<a href="mailto: Steve@ThirdStarStudios.com">steve@thirdstarstudios.com</a><br/>
 	<a href="tel:1-438-826-6514">(438) 826-6514</a><br/>
 	<address>
-		Appt 101, 6965 Rue Drolet
+		911 Beaubien
 		Montreal, Quebec
 		H2S 2T5
 	</address>
 </div>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript">
+//init google maps
+function initMap() {
+   if (!document.querySelector('#map')) return
+
+    var mapOptions = {
+        zoom: 15,
+        backgroundColor: 'none',
+        disableDefaultUI: true,
+        center: {lat: 45.5367097, lng: -73.6048973},
+        styles: [{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"stylers":[{"hue":"#00aaff"},{"saturation":-100},{"gamma":2.15},{"lightness":12}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":24}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":57}]}]
+    };
+    var mapElement = document.getElementById('map');
+    var map = new google.maps.Map(mapElement, mapOptions);
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(45.5367097, -73.6048973),
+        map: map,
+        title: 'ThirdStarStudios'
+    });
+}
+
+google.maps.event.addDomListener(window, 'load', initMap);
+</script>
 
 </section>
