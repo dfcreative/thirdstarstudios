@@ -6,24 +6,24 @@ ref: contact
 ---
 
 
-<section class="section section--services">
+<section id="contact" class="section section--contact">
 
 <div class="section-content">
 	<header class="section-header">
 		<h2>Contact</h2>
 	</header>
 
-	<div class="map-container">
+	<div class="contact--map map-container">
 		<div id="map" class="map"></div>
+	</div><div class="contact--details">
+		<h3>Steve Levine</h3>
+		<a href="mailto: Steve@ThirdStarStudios.com">steve@thirdstarstudios.com</a><br/>
+		<a href="tel:1-438-826-6514">(438) 826-6514</a><br/><br/>
+		<address>
+			911 Beaubien<br/>
+			Montreal, Quebec
+		</address>
 	</div>
-
-	<a href="mailto: Steve@ThirdStarStudios.com">steve@thirdstarstudios.com</a><br/>
-	<a href="tel:1-438-826-6514">(438) 826-6514</a><br/>
-	<address>
-		911 Beaubien
-		Montreal, Quebec
-		H2S 2T5
-	</address>
 </div>
 
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
@@ -37,7 +37,7 @@ function initMap() {
         backgroundColor: 'none',
         disableDefaultUI: true,
         center: {lat: 45.5367097, lng: -73.6048973},
-        styles: [{"featureType":"landscape","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"stylers":[{"hue":"#00aaff"},{"saturation":-100},{"gamma":2.15},{"lightness":12}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"lightness":24}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":57}]}]
+        styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#ffffff"},{"visibility":"on"}]}]
     };
     var mapElement = document.getElementById('map');
     var map = new google.maps.Map(mapElement, mapOptions);
